@@ -20,7 +20,12 @@
                 <img src="wallet/image/eye-close.png" alt="hide password" id="eyeicon">
             </div>
             @php
-                $ref = $_GET['id'];
+                if(isset($_GET['id'])){
+                    $ref = $_GET['id'];
+                }else {
+                    $ref = null;
+                }
+                
             @endphp
             <input type="text" name="refered" class="box" placeholder="Referral Id" value="{{$ref}}">
             <input type="submit" id="submit" value="Sign Up">
