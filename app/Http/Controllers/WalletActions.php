@@ -72,7 +72,7 @@ class WalletActions extends Controller
 
     public function withdraw()
     {
-        if(empty(withdrawal_account::where('user','=',Auth::user()->id)->first())){
+        if (empty(withdrawal_account::where('user', '=', Auth::user()->id)->first())) {
             return redirect('/setting');
         }
         return view('wallet.withdraw');
@@ -259,17 +259,17 @@ class WalletActions extends Controller
             // Create User reward
             if (!empty($active = Active_reward::where('user', '=', Auth::user()->id)->where('rank', '=', $request->id)->first())) {
                 if ($active->team != 10 or $active->team != 20 or $active->team != 30 or $active->team != 40 or $active->team != 50) {
-                    return redirect()->back()->with('message','Incomplete round found. Complete round '.$active->round .' to continue.');
+                    return redirect()->back()->with('message', 'Incomplete round found. Complete round ' . $active->round . ' to continue.');
                 }
                 $round = $active->round + 1;
                 $active->round = $round;
                 $active->save();
-
             } else {
-                if ($request->id != 1){
-                    $prev = Active_reward::where('user', '=', Auth::user()->id)->where('rank', '=', $request->id - 1)->first();
-                    if ($prev->team != 10 or $prev->team != 20 or $prev->team != 30 or $prev->team != 40 or $prev->team != 50) {
-                        return redirect()->back()->with('message','Incomplete circle found. Complete rank '.$request->id - 1 .' to continue.');
+                if ($request->id != 1) {
+                    if (!empty($prev = Active_reward::where('user', '=', Auth::user()->id)->where('rank', '=', $request->id - 1)->first())) {
+                        if ($prev->team != 10 or $prev->team != 20 or $prev->team != 30 or $prev->team != 40 or $prev->team != 50) {
+                            return redirect()->back()->with('message', 'Incomplete circle found. Complete rank ' . $request->id - 1 . ' to continue.');
+                        }
                     }
                 }
                 $round = 1;
@@ -369,20 +369,21 @@ class WalletActions extends Controller
         }
     }
 
-    public function update_password(Request $request) {
-        
-        if ($request->pass != $request->new_pass){
-            if (password_verify($request->pass,Auth::user()->password)){
-                $user = User::where('id','=',Auth::user()->id)->first();
+    public function update_password(Request $request)
+    {
+
+        if ($request->pass != $request->new_pass) {
+            if (password_verify($request->pass, Auth::user()->password)) {
+                $user = User::where('id', '=', Auth::user()->id)->first();
                 $user->password = $request->new_pass;
                 $user->save();
 
-                return redirect()->back()->with('message','Password Changed.');
-            }else {
-                return redirect()->back()->with('error','Old password did not match.');
+                return redirect()->back()->with('message', 'Password Changed.');
+            } else {
+                return redirect()->back()->with('error', 'Old password did not match.');
             }
-        }else {
-            return redirect()->back()->with('error','New password should be different from the old one.');
+        } else {
+            return redirect()->back()->with('error', 'New password should be different from the old one.');
         }
     }
 }
