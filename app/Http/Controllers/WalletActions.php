@@ -72,7 +72,7 @@ class WalletActions extends Controller
 
     public function withdraw()
     {
-        if(!empty(withdrawal_account::where('user','=',Auth::user()->id)->first())){
+        if(empty(withdrawal_account::where('user','=',Auth::user()->id)->first())){
             return redirect('/setting');
         }
         return view('wallet.withdraw');
