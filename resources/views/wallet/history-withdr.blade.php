@@ -12,7 +12,7 @@
         <a href="/history-withdr"> <button>Withdrawal</button></a>
     </div>
     @php
-    $hists = App\Models\Withdrawal::where('user','=',Auth::user()->id)->get();
+    $hists = App\Models\Withdrawal::where('user','=',Auth::user()->id)->paginate(10);
     @endphp
     <div class="tot">
         <div class="tbal">
