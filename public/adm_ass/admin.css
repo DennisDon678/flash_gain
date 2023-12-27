@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-bottom: 70px;
+    background: #eeebed;
+    font-family: 'poppins', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 57px;
+    background: #1f77ce;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    border-top: 4px solid #0e0109;
+    z-index: 1;
+
+}
+
+.navbar ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 8px;
+
+}
+
+.navbar ul li :active {
+    color: #0e0109;
+
+}
+
+.navbar ul li {
+    list-style: none;
+    z-index: 1;
+}
+
+
+.navbar ul li a .icon {
+    font-size: 1.5rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+}
+.box-user {
+    height: 140px;
+    background: #ffffff;
+    position: relative;
+    top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.192);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid #0e0109;
+}
+
+.box-user .balance {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+
+}
+
+.box-user .balance .mount {
+    border-bottom: 3px solid #1f77ce;
+    margin: 5px;
+    width: 100px;
+    text-align: center;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.box-user .balance .mount p {
+    margin-bottom: 3px;
+    font-family: Georgia, Times, serif;
+    font-weight: bold;
+}
+
+.box-user h2 {
+    position: absolute;
+    top: 10px;
+}
+.vcc{
+    height: 5px;
+    margin-bottom: 20px;
+    background: #0e0109;
+}
+/*table*/
+h1{
+    text-align: center;
+    margin: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.header_fixed {
+    max-height: 100vh;
+    width: 90%;
+    border-radius: 15px;
+    overflow: auto;
+    margin: auto;
+    border: 1px solid #dddddd;
+}
+
+.header_fixed thead th {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    color: #e6e7e8;
+    font-size: 15px;
+}
+
+th,
+td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+td img {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    border: 5px solid #e6e7e8;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+    background-color: #edeef1;
+}
+
+tr:hover td {
+    color: #44b478;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+td button {
+    border: none;
+    padding: 7px 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: #e6e7e8;
+}
+ .bt {
+  display: flex;
+  gap: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.bat{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    margin-top: 20px;
+}
+.bat i{
+    font-size: 2rem;
+}
+.bat a{
+    text-decoration: none;
+    color: #000;
+}
+.dill{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    background: #dddddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+.dill .dill-info{
+    text-align: left;
+    margin-bottom: 15px;
+}
+.dill .dill-info p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.dill .dill-info span{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.mod{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .serch{
+    display: block;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.serch .ser{
+    display: flex;
+    margin-top: 10px;
+}
+.serch .ser input{
+    outline: none;
+    background: transparent;
+    border: 1px solid #00000039;
+    height: 20px;
+}
+.serch .ser i{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #06021b40;
+}

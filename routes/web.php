@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WalletActions;
 use Illuminate\Support\Facades\Auth;
@@ -68,3 +69,17 @@ Route::middleware('auth')->controller(WalletActions::class)->group(function () {
     Route::post('/withdraw','process_withdrawal');
     Route::post('/setting/password','update_password');
 });
+Route::get('/login/admin',function(){
+    return view('wallet.admin_log');
+});
+Route::post('/login/admin',[AuthController::class,'admin_login']);
+
+
+// AdminRoutes
+Route::prefix('/admin')->middleware('admin')->controller(AdminController::class)->group(function (){
+    Route::get('/','dashboard');
+    Route::get('/user','users_list');
+});
+// Route::get('/pass', function (){
+//     dd(password_hash('admin',PASSWORD_DEFAULT));
+// });

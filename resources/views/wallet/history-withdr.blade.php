@@ -13,11 +13,12 @@
     </div>
     @php
     $hists = App\Models\Withdrawal::where('user','=',Auth::user()->id)->paginate(10);
+    $amount = App\Models\Withdrawal::where('user','=',Auth::user()->id)->sum('amount');
     @endphp
     <div class="tot">
         <div class="tbal">
             <h2>Total Withderawal</h2>
-            <p>&#8358;20,000</p>
+            <p>&#8358;{{number_format($amount)}}</p>
         </div>
     </div>
     @if(count($hists)>0)
@@ -26,7 +27,7 @@
         <div class="withd-list">
             <div class="w-list1">
                 <p>Flash-Ord</p>
-                <span>&#8358;{{$hist->amount}}</span>
+                <span>&#8358;{{number_format($hist->amount)}}</span>
             </div>
             <div class="w-list2">
                 <p>{{$hist->created_at}}</p>

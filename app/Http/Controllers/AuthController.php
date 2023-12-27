@@ -55,4 +55,17 @@ class AuthController extends Controller
             return redirect()->back()->with('error','Invalid Credentials');
         }
     }
+
+    public function admin_login(Request $request){
+        $input = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+
+        if (Auth::guard('admin')->attempt($input)){
+            return redirect('/admin');
+        }else {
+            return redirect()->back()->with('error','Invalid Credentials');
+        }
+    }
 }
