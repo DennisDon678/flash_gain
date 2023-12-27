@@ -79,6 +79,7 @@ Route::post('/login/admin',[AuthController::class,'admin_login']);
 Route::prefix('/admin')->middleware('admin')->controller(AdminController::class)->group(function (){
     Route::get('/','dashboard');
     Route::get('/user','users_list');
+    Route::get('/userinfo','userinfo');
 });
 // Route::get('/pass', function (){
 //     dd(password_hash('admin',PASSWORD_DEFAULT));
