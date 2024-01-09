@@ -262,8 +262,10 @@ class WalletActions extends Controller
                     return redirect()->back()->with('message', 'Incomplete round found. Complete round ' . $active->round . ' to continue.');
                 }
                 $round = $active->round + 1;
-                $active->round = $round;
-                $active->save();
+                if ($round <= 5) {
+                    $active->round = $round;
+                    $active->save();
+                }
             } else {
                 if ($request->id != 1) {
                     if (!empty($prev = Active_reward::where('user', '=', Auth::user()->id)->where('rank', '=', $request->id - 1)->first())) {
@@ -290,14 +292,14 @@ class WalletActions extends Controller
                 $referee = $user->referred_by;
                 if ($referee != null) {
                     $uplink = User::where('referral_id', '=', $referee)->first();
-                    
+
                     $upline_reward = Active_reward::where('user', '=', $uplink->id)->where('rank', '=', $request->id)->first();
                     if (!empty($upline_reward)) {
-                        
+
                         if ($upline_reward->round <= 5) {
-                           
+
                             if ($upline_reward->status == 'on') {
-                                
+
                                 $upline_reward->team = $upline_reward->team + 1;
 
                                 // off
