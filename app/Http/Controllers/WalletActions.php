@@ -155,7 +155,7 @@ class WalletActions extends Controller
 
         if ($order->amount <= Auth::user()->order_bal) {
             $active = Active_orders::where('user', '=', Auth::user()->id)->where('status', '=', 'on')->get();
-            if (empty($active)) {
+            if (!empty($active)) {
                 $input = [
                     'user' => Auth::user()->id,
                     'order' => $order->id,
