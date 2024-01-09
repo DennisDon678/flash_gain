@@ -260,11 +260,12 @@ class WalletActions extends Controller
             if (!empty($active = Active_reward::where('user', '=', Auth::user()->id)->where('rank', '=', $request->id)->first())) {
                 if ($active->team != 10 and $active->team != 20 and $active->team != 30 and $active->team != 40 and $active->team != 50) {
                     return redirect()->back()->with('message', 'Incomplete round found. Complete round ' . $active->round . ' to continue.');
-                }
-                $round = $active->round + 1;
-                if ($round <= 5) {
-                    $active->round = $round;
-                    $active->save();
+                } else {
+                    $round = $active->round + 1;
+                    if ($round <= 5) {
+                        $active->round = $round;
+                        $active->save();
+                    }
                 }
             } else {
                 if ($request->id != 1) {
