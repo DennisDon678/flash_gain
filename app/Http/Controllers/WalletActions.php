@@ -267,7 +267,7 @@ class WalletActions extends Controller
             } else {
                 if ($request->id != 1) {
                     if (!empty($prev = Active_reward::where('user', '=', Auth::user()->id)->where('rank', '=', $request->id - 1)->first())) {
-                        if ($prev->team != 10 or $prev->team != 20 or $prev->team != 30 or $prev->team != 40 or $prev->team != 50) {
+                        if ($prev->team != 10 and $prev->team != 20 and $prev->team != 30 and $prev->team != 40 and $prev->team and 50) {
                             return redirect()->back()->with('message', 'Incomplete circle found. Complete rank ' . $request->id - 1 . ' to continue.');
                         }
                     }
