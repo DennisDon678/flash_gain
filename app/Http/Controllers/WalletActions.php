@@ -290,7 +290,7 @@ class WalletActions extends Controller
                 $referee = $user->referred_by;
                 if ($referee != null) {
                     $uplink = User::where('referral_id', '=', $referee)->first();
-                    dd('here');
+                    
                     $upline_reward = Active_reward::where('user', '=', $uplink->id)->where('rank', '=', $request->id)->first();
                     if (!empty($upline_reward)) {
                         if ($upline_reward->round <= 5) {
