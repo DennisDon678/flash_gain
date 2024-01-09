@@ -258,7 +258,7 @@ class WalletActions extends Controller
 
             // Create User reward
             if (!empty($active = Active_reward::where('user', '=', Auth::user()->id)->where('rank', '=', $request->id)->first())) {
-                if ($active->team != 10 or $active->team != 20 or $active->team != 30 or $active->team != 40 or $active->team != 50) {
+                if ($active->team != 10 and $active->team != 20 and $active->team != 30 and $active->team != 40 and $active->team != 50) {
                     return redirect()->back()->with('message', 'Incomplete round found. Complete round ' . $active->round . ' to continue.');
                 }
                 $round = $active->round + 1;
