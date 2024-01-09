@@ -293,8 +293,9 @@ class WalletActions extends Controller
                     
                     $upline_reward = Active_reward::where('user', '=', $uplink->id)->where('rank', '=', $request->id)->first();
                     if (!empty($upline_reward)) {
-                        dd('here');
+                        
                         if ($upline_reward->round <= 5) {
+                            dd('here');
                             if ($upline_reward->status == 'on') {
                                 $upline_reward->team = $upline_reward->team + 1;
 
