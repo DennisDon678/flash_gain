@@ -33,7 +33,7 @@
     @php
     $current = App\Models\Active_orders::where('user','=',Auth::user()->id)->where('status','=','on')->first();
     if (!empty($current)){
-    $cur = App\Models\Orders::where('id','=',$current->id)->first();
+    $cur = App\Models\Orders::where('id','=',$current->order)->first();
     }
 
     @endphp

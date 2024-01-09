@@ -158,7 +158,7 @@ class WalletActions extends Controller
             if (!empty($active)) {
                 $input = [
                     'user' => Auth::user()->id,
-                    'order' => $order->id,
+                    'order' => $request->id,
                     'status' => 'on',
                     'expires' => Carbon::now()->addDays($order->days),
                     'earned' => '0'
