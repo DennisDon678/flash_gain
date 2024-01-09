@@ -297,7 +297,7 @@ class WalletActions extends Controller
                         if ($upline_reward->round <= 5) {
                            
                             if ($upline_reward->status == 'on') {
-                                dd('here');
+                                
                                 $upline_reward->team = $upline_reward->team + 1;
 
                                 // off
