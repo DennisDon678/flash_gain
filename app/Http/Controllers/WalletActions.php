@@ -264,6 +264,7 @@ class WalletActions extends Controller
                     $round = $active->round + 1;
                     if ($round <= 5) {
                         $active->round = $round;
+                        $active->status = 'on';
                         $active->save();
                     }
                 }
@@ -317,6 +318,9 @@ class WalletActions extends Controller
                         }
                     }
 
+                    $user->save();
+                    return redirect('/reward');
+                }else {
                     $user->save();
                     return redirect('/reward');
                 }

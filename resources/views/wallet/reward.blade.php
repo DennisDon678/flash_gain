@@ -69,10 +69,19 @@
     @forelse ($rewards as $reward)
         <div class="mlm-top">
         <div class="rank">
-            <p>{{$reward->round <= 5 ? 'Active':'Maxed'}}</p>
+            @if($reward->round <= 5)
+                <p>{{$reward->status == 'on' ? 'Active':'Inactive'}}</p>
+            @else
+            <p>Maxed</p>
+            @endif
         </div>
         <div class="ranke">
+            @if($reward->round <= 5)
+            <p><a href="/reward/pay?id={{$reward->rank}}">Reactivate</i></a></p>
+            @else
             <p><a href="/reward/rank1"><i class='bx bxs-down-arrow'></i></a></p>
+            @endif
+            
         </div>
         <div class="li"></div>
         <div class="le"></div>
