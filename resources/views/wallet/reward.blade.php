@@ -76,10 +76,10 @@
             @endif
         </div>
         <div class="ranke">
-            @if($reward->round <= 5)
+            @if($reward->round <= 5 and $reward->status == 'off')
             <p><a href="/reward/pay?id={{$reward->rank}}">Reactivate</i></a></p>
             @else
-            <p><a href="/reward/rank1"><i class='bx bxs-down-arrow'></i></a></p>
+            <p><a href="#"><i class='bx bxs-down-arrow'></i></a></p>
             @endif
             
         </div>
