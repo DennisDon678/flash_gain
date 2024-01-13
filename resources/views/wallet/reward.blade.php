@@ -25,7 +25,7 @@
                 <span>Today Earn</span>
             </div> --}}
             <div class="mount">
-                <p>&#8358;{{number_format(Auth::user()->grow_bal,2)}}</p>
+                <p>&#8358;{{number_format(Auth::user()->grow_bal)}}</p>
                 <span>Curent Ball</span>
             </div>
         </div>
