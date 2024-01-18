@@ -24,7 +24,7 @@
     <div class="asds">
         <div class="asde">
             <button id="open-popup-btn">
-                <a href="orderpay.html"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fgroups%2F2137831693224059%2F"><i class='bx bxl-facebook'></i></a>
             </button>
             <p>Facebook</p>
 
@@ -34,7 +34,7 @@
     <div class="asds">
         <div class="asde">
             <button id="open-popup-btn">
-                <a href="orderpay.html"><i class='bx bxl-telegram'></i></a>
+                <a href="https://t.me/T6El_jWsDY0 "><i class='bx bxl-telegram'></i></a>
             </button>
             <p>Telegram</p>
         </div>
