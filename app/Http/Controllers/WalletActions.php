@@ -168,6 +168,17 @@ class WalletActions extends Controller
                 $user = User::where('id', '=', Auth::user()->id)->first();
                 $user->order_bal = $user->order_bal - $order->amount;
                 $user->save();
+                
+                // check for referral
+                $referee = $user->referred_by;
+                if ($referee != null) {
+                    $uplink = User::where('referral_id', '=', $referee)->first();
+
+                    // 6% earned
+                    $earned = $order->amount*6/100;
+                    $uplink->order_bal = $uplink->order_bal + $earned;
+                    $uplink->save();
+                }
 
                 return redirect()->back();
             } else {
