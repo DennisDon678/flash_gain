@@ -90,13 +90,13 @@
         <div class="hobo-iner">
             <p><i class='bx bxs-coin-stack'>Withdrawal Record</i> </p>
         </div>
-        <span><a href="/history-withdraw"><i class='bx bxs-chevron-right'></i></a></span>
+        <span><a href="/history-withdr"><i class='bx bxs-chevron-right'></i></a></span>
     </div>
     <div class="hobo">
         <div class="hobo-iner">
             <p><i class='bx bxs-receipt'>Order Record</i> </p>
         </div>
-        <span><a href="/history-recharge"><i class='bx bxs-chevron-right'></i></a></i></span>
+        <span><a href="/history-recha"><i class='bx bxs-chevron-right'></i></a></i></span>
     </div>
     <div class="hobo">
         <div class="hobo-iner">
