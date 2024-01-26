@@ -22,12 +22,14 @@
             @php
                 if(isset($_GET['id'])){
                     $ref = $_GET['id'];
+                    $act = null;
                 }else {
                     $ref = null;
+                    $act = 'readonly';
                 }
                 
             @endphp
-            <input type="text" name="refered" class="box" placeholder="Referral Id" value="{{$ref}}">
+            <input type="text" name="refered" class="box" placeholder="Referral Id" value="{{$ref}}"  {{$act}}>
             <input type="submit" id="submit" value="Sign Up">
             <a href="/login">Login</a>
         </form>

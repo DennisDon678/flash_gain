@@ -58,7 +58,9 @@
                     <td>{{$info->bank_account}}</td>
                     <td>{{$info->account_name}}</td>
                     <td>&#8358; {{$pend->amount}}</td>
-                    <td class="bt"><button><i class='bx bx-check'></i></button><button><i class='bx bx-x'></i></button></td>
+                    <td class="bt"><button><a href="/admin/approve_withdrawal?id={{$pend->id}}" style="color: white"><i class='bx bx-check'></i></a></button>
+                        <button><a href="/admin/reject_withdrawal?id={{$pend->id}}" style="color: white"><i class='bx bx-x'></i></a></button>
+                    </td>
                 </tr>
                 @empty
                 <tr>
