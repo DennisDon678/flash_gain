@@ -45,7 +45,7 @@
             <button id="open-popup-btn">
                 <a href="https://apk.e-droid.net/apk/app2995039-pcsjbt.apk?v=1"><i class='bx bxl-play-store'></i></a>
             </button>
-            <p>Telegram</p>
+            <p>Download App</p>
         </div>
     </div>
     <!--buttom menue-->
