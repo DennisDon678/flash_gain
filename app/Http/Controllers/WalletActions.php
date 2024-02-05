@@ -460,6 +460,8 @@ class WalletActions extends Controller
             $user->save();
 
             return redirect('/my_wallet');
+        }else {
+            return redirect()->back()->with('error','Invalid or Used coupon');
         }
     }
 }

@@ -30,6 +30,9 @@
         <div class="mme">
             <h2>Submit Your Coupon Here</h2>
         </div><br>
+        @if (Session::has('error'))
+        <p style="color: red">{{Session::get('error')}}</p>
+    @endif
         <form action="/deposit/coupon" method="post">
             @csrf
             <select name="selected" required>
