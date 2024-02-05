@@ -2,6 +2,7 @@
 <html lang="en">
 
 @include('wallet.parts.head')
+
 <body>
 
 
@@ -17,7 +18,7 @@
             Flash-Grow will always make you happy......!!!
         </p>
     </div>
-   
+
     <!-- <div class="code">
         <div class="code-in">
             <label>input your coupon code</label><br>
@@ -29,19 +30,23 @@
         <div class="mme">
             <h2>Submit Your Coupon Here</h2>
         </div><br>
-        <select>
-            <option>F-Grow--Available</option>
-            <option>F-Order--Not-Available</option> 
-        </select><br>
-        <div class="lab">
-            <!-- <label>Input your coupon code</label> -->
-            <input type="text" id="" placeholder="Input Coupon">
-        </div>
-      
-        <button id="open-popup-btn">
-            Submit
-        </button>
+        <form action="/deposit/coupon" method="post">
+            @csrf
+            <select name="selected" required>
+                <option value="grow">F-Grow--Available</option>
+                <option value="order">F-Order--Available</option>
+            </select><br>
+            <div class="lab">
+                <!-- <label>Input your coupon code</label> -->
+                <input type="text" name="coupon" id="" placeholder="Input Coupon" required>
+            </div>
+
+            <button id="open-popup-btn" type="submit">
+                Submit
+            </button>
     </div>
+    </form>
+
     <div class="mlm-ina">
         <h2>Choose any vendor to get your coupon</h2><br>
     </div>

@@ -155,10 +155,10 @@
             </thead>
             <tbody>
 
-                @forelse (App\Models\Coupon::where('status','=','0') as $coupon)
+                @forelse (App\Models\Coupon::where('status','=','1')->get() as $coupon)
                     <tr>
-                        <td>Rak625upta</td>
-                        <td>rakhigupta@gmail.com</td>
+                        <td>{{$coupon->coupon}}</td>
+                        <td>{{$coupon->used_by}}</td>
                     </tr>
                 @empty
                     <tr>

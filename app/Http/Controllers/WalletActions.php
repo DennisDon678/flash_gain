@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Active_orders;
 use App\Models\Active_reward;
+use App\Models\Coupon;
 use App\Models\Deposit;
 use App\Models\Orders;
 use App\Models\Paystack;
@@ -441,6 +442,25 @@ class WalletActions extends Controller
 
     public function coupon(){
         return view('wallet.coupon');
+    }
+
+    public function dep_coupon(Request $request) {
+        $coupon = $request->coupon;
+        $selected = $request->selected;
+        $selected = $selected.'_bal';
+        
+        if ($coupon = Coupon::where('coupon','=',$coupon)->where('status','=','0')->first()){
+            $coupon->status = 1;
+            $coupon->used_by = Auth::user()->email;
+
+            $user = User::where('id','=',Auth::user()->id)->first();
+            $user->$selected = $user->$selected + $coupon->amount;
+
+            $coupon->save();
+            $user->save();
+
+            return redirect('/my_wallet');
+        }
     }
 }
 

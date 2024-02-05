@@ -70,6 +70,7 @@ Route::middleware('auth')->controller(WalletActions::class)->group(function () {
     Route::post('/setting/password','update_password');
     Route::get('/test_payment','test');
     Route::get('/coupon', 'coupon');
+    Route::post('/deposit/coupon','dep_coupon');
 });
 Route::get('/login/admin',function(){
     return view('wallet.admin_log');
