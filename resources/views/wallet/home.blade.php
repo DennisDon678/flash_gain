@@ -34,7 +34,16 @@
     <div class="asds">
         <div class="asde">
             <button id="open-popup-btn">
-                <a href="https://t.me/T6El_jWsDY0 "><i class='bx bxl-telegram'></i></a>
+                <a href="https://t.me/T6El_jWsDY0"><i class='bx bxl-telegram'></i></a>
+            </button>
+            <p>Telegram</p>
+        </div>
+    </div>
+
+    <div class="asds">
+        <div class="asde">
+            <button id="open-popup-btn">
+                <a href="https://apk.e-droid.net/apk/app2995039-pcsjbt.apk?v=1"><i class='bx bxl-play-store'></i></a>
             </button>
             <p>Telegram</p>
         </div>
