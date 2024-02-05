@@ -51,30 +51,6 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    public function approve(Request $request) {
-        $pending = Withdrawal::where('id','=',$request->id)->first();
-
-        $pending->status = 'approved';
-        $pending->save();
-
-        return redirect()->back();
-    }
-
-    public function reject(Request $request){
-        $pending = Withdrawal::where('id','=',$request->id)->first();
-
-        $pending->status = 'rejected';
-        $pending->save();
-
-        // Refund User
-        $user = User::where('id','=',$pending->user)->first();
-        $bal = $pending->balance.'_bal';
-        $user->$bal = $user->$bal + $pending->amount;
-        $user->save();
-
-        return redirect()->back();
-    }
-
     public function coupon()
     {
         return view('admin.coupon');
