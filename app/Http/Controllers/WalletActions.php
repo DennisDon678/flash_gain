@@ -407,4 +407,41 @@ class WalletActions extends Controller
             return redirect()->back()->with('error', 'New password should be different from the old one.');
         }
     }
+
+    public function test(){
+        $paystack = Paystack::first();
+        $reference = Str::random(12);
+
+        $input = [
+            'user' => Auth::user()->id,
+            'type' => 'grow_pay',
+            'trans_id' => $reference,
+            'amount' => 100,
+            'status' => 'pending',
+        ];
+        Deposit::create($input);
+
+        $response = Http::withHeaders(
+            [
+                "Authorization" => "Bearer " . $paystack->secret,
+                "Cache-Control" => "no-cache",
+            ]
+        )->post(
+            'https://api.paystack.co/transaction/initialize',
+            [
+                'email' => Auth::user()->email,
+                'amount' => 100 * 100,
+                'callback_url' => env('APP_URL') . "/verify_transaction",
+                'reference' => $reference,
+            ]
+        )->json();
+
+        return redirect($response['data']['authorization_url']);
+    }
+
+    public function coupon(){
+        return view('wallet.coupon');
+    }
 }
+
+

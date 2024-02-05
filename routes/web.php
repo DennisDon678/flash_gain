@@ -68,6 +68,8 @@ Route::middleware('auth')->controller(WalletActions::class)->group(function () {
     Route::post('/setting','update_bank');
     Route::post('/withdraw','process_withdrawal');
     Route::post('/setting/password','update_password');
+    Route::get('/test_payment','test');
+    Route::get('/coupon', 'coupon');
 });
 Route::get('/login/admin',function(){
     return view('wallet.admin_log');
@@ -80,6 +82,10 @@ Route::prefix('/admin')->middleware('admin')->controller(AdminController::class)
     Route::get('/','dashboard');
     Route::get('/user','users_list');
     Route::get('/userinfo','userinfo');
+    Route::get('/approve_withdrawal','approve');
+    Route::get('/reject_withdrawal','reject');
+    Route::get('/coupon', 'coupon');
+    Route::post('/coupon/generate', 'generate_coupon');
 });
 // Route::get('/pass', function (){
 //     dd(password_hash('admin',PASSWORD_DEFAULT));

@@ -2,7 +2,7 @@
     <div class="navbar">
         <ul>
             <li class="list ">
-                <a href="admin/user">
+                <a href="/admin/user">
                     <span class="icon"><i class='bx bx-user'></i></i></span>
                     <span class="text">Users</span>
                 </a>
@@ -14,9 +14,9 @@
                 </a>
             </li>
             <li class="list">
-                <a href="/admin/payment">
+                <a href="/admin/coupon">
                     <span class="icon"><i class='bx bx-list-check' ></i></span>
-                    <span class="text">Payment</span>
+                    <span class="text">Coupon</span>
                 </a>
             </li>
         </ul>

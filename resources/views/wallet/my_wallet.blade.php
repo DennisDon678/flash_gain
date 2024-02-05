@@ -51,10 +51,10 @@
                     <p>Withdraw</p>
                 </div>
             </a>
-            <a href="/history">
+            <a href="/coupon">
                 <div class="min-list">
                     <span><i class='bx bx-rotate-right'></i></span>
-                    <p>History</p>
+                    <p>Coupon</p>
                 </div>
             </a>
             <a href="/order">
