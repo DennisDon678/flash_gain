@@ -57,7 +57,7 @@
     <div class="asds">
         <div class="asde">
             <button id="open-popup-btn">
-                <a href="coupon.html"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://wa.me/8146724119?text=I%20need%20Flash-Gain%20coupon-code"><i class='bx bxl-whatsapp'></i></a>
             </button>
             <p>Buy Coupon from chizy</p>
 
@@ -67,7 +67,7 @@
     <div class="asds">
         <div class="asde">
             <button id="open-popup-btn">
-                <a href="coupon.html"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://wa.me/8133122086?text=I%20need%20Flash-Gain%20coupon-code"><i class='bx bxl-whatsapp'></i></a>
             </button>
             <p>Buy Coupon from bella</p>
 
@@ -77,7 +77,7 @@
     <div class="asds">
         <div class="asde">
             <button id="open-popup-btn">
-                <a href="coupon.html"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://wa.me/7052794486?text=I%20need%20Flash-Gain%20coupon-code"><i class='bx bxl-whatsapp'></i></a>
             </button>
             <p>Buy Coupon usas</p>
 
