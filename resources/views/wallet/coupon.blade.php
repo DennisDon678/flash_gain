@@ -84,6 +84,16 @@
         </div>
 
     </div>
+    <div class="asds">
+        <div class="asde">
+            <button id="open-popup-btn">
+                <a href="https://wa.me/9049843571?text=I%20need%20Flash-Gain%20coupon-code "><i class='bx bxl-whatsapp'></i></a>
+            </button>
+            <p>Buy Coupon usas</p>
+
+        </div>
+
+    </div>
     <div class="pay-var">
         <p>Select any vendor and get your code</p>
     </div>
