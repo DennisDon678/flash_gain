@@ -50,6 +50,7 @@
     </div>
     </form>
 
+    
     <div class="mlm-ina">
         <h2>Choose any vendor to get your coupon</h2><br>
     </div>
@@ -57,9 +58,9 @@
     <div class="asds">
         <div class="asde">
             <button id="open-popup-btn">
-                <a href="https://wa.me/8146724119?text=I%20need%20Flash-Gain%20coupon-code"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://wa.me/9049843571?text=I%20need%20Flash-Gain%20coupon-code"><i class='bx bxl-whatsapp'></i></a>
             </button>
-            <p>Buy Coupon from chizy</p>
+            <p>Buy Coupon from First vendor</p>
 
         </div>
 
@@ -69,7 +70,7 @@
             <button id="open-popup-btn">
                 <a href="https://wa.me/8133122086?text=I%20need%20Flash-Gain%20coupon-code"><i class='bx bxl-whatsapp'></i></a>
             </button>
-            <p>Buy Coupon from bella</p>
+            <p>Buy Coupon from second vendor </p>
 
         </div>
 
@@ -77,9 +78,9 @@
     <div class="asds">
         <div class="asde">
             <button id="open-popup-btn">
-                <a href="https://wa.me/7052794486?text=I%20need%20Flash-Gain%20coupon-code"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://wa.me/8146724119?text=I%20need%20Flash-Gain%20coupon-code"><i class='bx bxl-whatsapp'></i></a>
             </button>
-            <p>Buy Coupon usas</p>
+            <p>Buy Coupon from third vendor</p>
 
         </div>
 
@@ -87,9 +88,19 @@
     <div class="asds">
         <div class="asde">
             <button id="open-popup-btn">
-                <a href="https://wa.me/9049843571?text=I%20need%20Flash-Gain%20coupon-code "><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://wa.me/7025227106?text=I%20need%20Flash-Gain%20coupon-code"><i class='bx bxl-whatsapp'></i></a>
             </button>
-            <p>Buy Coupon usas</p>
+            <p>Buy Coupon from fourth vendor</p>
+
+        </div>
+
+    </div>
+  <div class="asds">
+        <div class="asde">
+            <button id="open-popup-btn">
+                <a class='bx bxl-whatsapp'></i></a>
+            href="https://wa.me/7052794486?text=I%20need%20Flash-Gain%20coupon-code"><i</button>
+            <p>Buy Coupon from fourth vendor</p>
 
         </div>
 
